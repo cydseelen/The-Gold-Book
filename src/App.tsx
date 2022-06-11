@@ -1,9 +1,12 @@
 import React from "react";
-import { Box, CssBaseline, Paper, ThemeProvider, Typography } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { routes as appRoutes } from "./routes";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
-
   const theme = createTheme({
     palette: {
       primary: {
@@ -22,25 +25,24 @@ function App() {
   });
 
   return (
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Box
-          height="100vh"
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="column"
-        >
-          <Paper
-            elevation={3}
-            sx={{ padding: "1rem", backgroundColor: "secondary.light" }}
-          >
-            <Typography color="primary.dark" variant="h1">
-              The Gold Book
-            </Typography>
-          </Paper>
-        </Box>
-      </ThemeProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box height="100vh" display="flex" flexDirection="column">
+        <Router>
+          <Navbar />
+          <Routes>
+            {appRoutes.map((route) => (
+              <Route
+                key={route.key}
+                path={route.path}
+                element={<route.component />}
+              />
+            ))}
+          </Routes>
+          <Footer />
+        </Router>
+      </Box>
+    </ThemeProvider>
   );
 }
 
