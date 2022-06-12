@@ -1,7 +1,7 @@
 import React, {ReactElement, FC} from "react";
 import {Box, Typography} from "@mui/material";
 
-const Home: FC<any> = (): ReactElement => {
+const Recipe: FC<any> = (): ReactElement => {
     return (
         <Box sx={{
             flexGrow: 1,
@@ -10,9 +10,9 @@ const Home: FC<any> = (): ReactElement => {
             justifyContent: 'center',
             alignItems: 'center'
         }}>
-            <Typography variant="h3">Home Page</Typography>
+            <Typography variant="h3">Recipe Page</Typography>
         </Box>
     );
 };
 
-export default Home;
+export default Recipe;

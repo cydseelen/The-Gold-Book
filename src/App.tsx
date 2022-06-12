@@ -10,16 +10,16 @@ function App() {
   const theme = createTheme({
     palette: {
       primary: {
-        light: "#63b8ff",
-        main: "#0989e3",
-        dark: "#005db0",
-        contrastText: "#000",
+        light: "#ffffff",
+        main: "#d4c3acff",
+        dark: "#ffda3dff",
+        contrastText: "#363636ff",
       },
       secondary: {
-        main: "#4db6ac",
-        light: "#82e9de",
-        dark: "#00867d",
-        contrastText: "#000",
+        light: "#e8ddd9ff",
+        main: "#eacf75ff",
+        dark: "#d0ad51ff",
+        contrastText: "#0f0f0fff",
       },
     },
   });
