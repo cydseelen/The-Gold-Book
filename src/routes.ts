@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import Recipe from "./pages/Recipe";
 import newRecipe from "./pages/newRecipe";
+import Intro from "./pages/Intro";
 
 
 import {FC} from "react";
@@ -16,9 +17,16 @@ interface Route {
 
 export const routes: Array<Route> = [
     {
+        key: 'intro-route',
+        title: 'Intro',
+        path: '/',
+        enabled: true,
+        component: Intro
+    },
+    {
         key: 'home-route',
         title: 'Home',
-        path: '/',
+        path: '/home',
         enabled: true,
         component: Home
     },
